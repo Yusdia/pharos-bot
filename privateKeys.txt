@@ -1,5 +1,5 @@
-pk1
-pk2
-pk3
+private_key1
+private_key2
+private_key3
 dst
-1k akun juga oke 
+pisahkan dengan [enter] disetiap private_key 
