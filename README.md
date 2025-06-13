@@ -1,4 +1,4 @@
-# 🚀 PHAROS-AUTO | Bot Airdrop Testnet by AirDropFamilyIDN
+# 🚀 PHAROS-AUTO | Bot Airdrop Testnet
 ![image](https://github.com/user-attachments/assets/6e11bb69-7224-4e36-ba2c-9cd347fe3586)
 
 
@@ -46,7 +46,7 @@ Download & install dari: [https://www.python.org/downloads/](https://www.python.
 ### 2. Install Modul Wajib
 
 ```
-git clone https://github.com/AirdropFamilyIDN-V2-0/PHAROS-AUTO.git
+git clone https://github.com/kajijp/PHAROS-AUTO.git
 ```
 ```
 cd PHAROS-AUTO
@@ -89,7 +89,12 @@ Transaksi dilakukan langsung ke smart contract menggunakan Web3
 
 Script ini 100% open-source, dikembangkan bersama komunitas
 
-👥 KOMUNITAS
-💬 Diskusi, update, dan bantuan:
-👉 Telegram: @AirDropFamilyIDN
+<br><br><br>
+🔥 Mohon dukungan agar KajiJP semakin berkembang, like dan gabung ke channel kami, sebarkan dan undang teman anda, terima kasih, Insyaallah JP!
+## 🌐 Komunitas KajiJP
+Gabung dan ikuti info terbaru:
+- 💬 [Telegram](https://t.me/kajijp)
+- 🎮 [Facebook](https://facebook.com/kajijp)
+- 🐦 [X / Twitter](https://x.com/wakkajijp)
+- ▶️ [Youtube](https://www.youtube.com/@KajiJP)
 
