@@ -1,5 +1,5 @@
-# 🚀 PHAROS-AUTO | Bot Airdrop Testnet
-![image](https://github.com/user-attachments/assets/6e11bb69-7224-4e36-ba2c-9cd347fe3586)
+# 🚀 Pharos-Bot | Bot Airdrop Testnet
+![image](assets/Screenshot_55.png)
 
 
 
