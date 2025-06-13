@@ -6,7 +6,6 @@ CHAIN_ID = 688688
 RPC_URL = "https://testnet.dplabs-internal.com"
 EXPLORER = "https://testnet.pharosscan.xyz/tx/"
 
-
 WPHRS_ADDRESS = w3.to_checksum_address("0x76aaada469d23216be5f7c596fa25f282ff9b364")
 USDC_ADDRESS = w3.to_checksum_address("0xad902cf99c2de2f1ba5ec4d642fd7e49cae9ee37")
 USDT_ADDRESS = w3.to_checksum_address("0xed59de2d7ad9c043442e381231ee3646fc3c2939")

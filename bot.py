@@ -47,7 +47,7 @@ def tampil_banner():
    ██║   ███████╗███████║   ██║   ██║ ╚████║███████╗   ██║   
    ╚═╝   ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝╚══════╝   ╚═╝   
 [/bold cyan]"""
-    console.print(Panel.fit(banner, title="[bold yellow]Testnet Tools - Pharos Testnet[/bold yellow]", subtitle="BY ADFMIDN TEAM"))
+    console.print(Panel.fit(banner, title="[bold yellow]Pharos Bot - [Garapan Testnet][/bold yellow]", subtitle="BY ADFMIDN TEAM"))
 def load_proxies(file_path="proxy.txt"):
     with open(file_path, "r") as f:
         return [line.strip() for line in f if line.strip()]
