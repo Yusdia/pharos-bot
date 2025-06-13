@@ -36,26 +36,25 @@ Bot otomatis untuk menyelesaikan semua task Pharos Testnet — termasuk check-in
 
 ## 🛠️ PERSIAPAN SEBELUM RUNNING
 
-### 1. Install Python 3.10+
-Download & install dari: [https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-> Jangan lupa centang opsi `Add Python to PATH` saat install!
-
----
-
-### 2. Install Modul Wajib
+### 1. Download atau Clone Repositori
 
 ```
-git clone https://github.com/kajijp/PHAROS-AUTO.git
+git clone https://github.com/kajijp/pharos-bot.git
 ```
 ```
-cd PHAROS-AUTO
+cd pharos-bot && chmod +x setup.sh
 ```
 ```
-pip install web3 eth-account requests colorama rich
+./setup.sh
 ```
 ```
-python bot.py
+# Pilih 1 untuk Intall semua Dependensi yang dibutuhkan
+# Pilih 2 untuk Jalankan Bot auto pharos testnet
+# Pilih 3 untuk Generate 100 wallet (privatekey auto tersimpan di privakeKeys.txt)
+# Pilih 4 untuk Cek Poin yang sudah kalian dapatkan
+# Pilih 5 untuk Minting NFT
+# Pilih 0 untuk Keluar dari bot
+
 ```
 # 🚀 PHAROS AUTO - Auto Mint NFT (Testnet) via Termux
 
@@ -76,18 +75,6 @@ Script Python untuk **otomatis mint NFT** di Pharos Testnet menggunakan **multi 
 - 🔗 Link transaksi langsung ke PharosScan
 
 ---
-
-## 📦 Modul Python yang Dibutuhkan
-
-```bash
-pip install web3 eth-account eth-utils requests
-
-🧠 CATATAN
-Semua transaksi menggunakan testnet, aman & tanpa biaya
-
-Transaksi dilakukan langsung ke smart contract menggunakan Web3 
-
-Script ini 100% open-source, dikembangkan bersama komunitas
 
 <br><br><br>
 🔥 Mohon dukungan agar KajiJP semakin berkembang, like dan gabung ke channel kami, sebarkan dan undang teman anda, terima kasih, Insyaallah JP!
