@@ -28,7 +28,8 @@ check_container
 
 Run_Bot() {
 	#source .venv/bin/activate
-    python3 bot.py
+	clear
+	python3 bot.py
 }
 
 Run_Check() {
