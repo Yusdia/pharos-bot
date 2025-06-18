@@ -1,7 +1,10 @@
 # 🚀 Pharos-Bot | Bot Airdrop Testnet
 ![image](assets/Screenshot_55.png)
 
-
+# Langkah Awal
+- Daftar Disini :  [Pharos Testnet](https://testnet.pharosnetwork.xyz/experience?inviteCode=Ospeomjme8qJ15kG )
+- Connect New Wallet
+- Connect X & Discord Account
 
 Bot otomatis untuk menyelesaikan semua task Pharos Testnet — termasuk check-in, faucet, swap token, transfer antar wallet, hingga staking. Semua dilakukan langsung via transaksi di blockchain  TX
 
