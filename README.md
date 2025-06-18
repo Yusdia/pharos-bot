@@ -52,6 +52,7 @@ cd pharos-bot && chmod +x setup.sh
 ```
 nano accounts.txt
 ```
+lalu simpan dengan mengetik `CTRL + X` lalu `Y` dan tekan `enter`
 ### Jalankan Bot
 ```
 ./setup.sh
