@@ -47,6 +47,13 @@ git clone https://github.com/kajijp/pharos-bot.git
 ```
 cd pharos-bot && chmod +x setup.sh
 ```
+
+### Masukkan Privatekey di accounts.txt
+```
+nano accounts.txt
+```
+lalu simpan dengan mengetik `CTRL + X` lalu `Y` dan tekan `enter`
+### Jalankan Bot
 ```
 ./setup.sh
 ```
@@ -59,6 +66,9 @@ cd pharos-bot && chmod +x setup.sh
 # Pilih 0 untuk Keluar dari bot
 
 ```
+
+
+
 # 🚀 PHAROS AUTO - Auto Mint NFT (Testnet) via Termux
 
 Script Python untuk **otomatis mint NFT** di Pharos Testnet menggunakan **multi wallet** + **proxy support**.  
