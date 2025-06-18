@@ -27,7 +27,7 @@ fi
 check_container
 
 Run_Bot() {
-	#source .venv/bin/activate
+	source .venv/bin/activate
 	clear
 	python3 bot.py
 }
@@ -63,8 +63,8 @@ install_dependencies() {
 
         curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
         
-        #python3.10 -m venv .venv
-        #source .venv/bin/activate
+        python3.10 -m venv .venv
+        source .venv/bin/activate
 	pip install --upgrade pip
 	pip install web3 eth-account requests colorama rich eth-keys eth-utils
 
