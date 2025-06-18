@@ -52,10 +52,8 @@ install_dependencies() {
 		apt install software-properties-common -y
 		add-apt-repository ppa:deadsnakes/ppa -y
         apt update
-
+		apt install --reinstall ca-certificates -y
         apt install -y python3.10 python3.10-venv python3.10-dev python3-pip
-		
-		pip install web3 eth-account requests colorama rich eth-keys eth-utils
 
         update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
         update-alternatives --set python3 /usr/bin/python3.10
@@ -66,6 +64,8 @@ install_dependencies() {
         
         python3.10 -m venv .venv
         source .venv/bin/activate
+		pip install --upgrade pip
+		pip install web3 eth-account requests colorama rich eth-keys eth-utils
 
 }
 
