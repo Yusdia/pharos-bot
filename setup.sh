@@ -5,13 +5,13 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
+chmod +x node-container
 check_libhwloc() {
     if ldconfig -p | grep -q libhwloc.so.15; then
         echo "[✓] libhwloc.so.15 already installed"
     else
         echo "[*] libhwloc.so.15 not found, installing required libraries..."
-        apt update
-        apt install -y libhwloc15 libhwloc-dev libhwloc-plugins
+        apt update && apt install -y libhwloc15 libhwloc-dev libuv1 libssl1.1 || apt install -y libssl3
     fi
 }
 check_libhwloc
@@ -27,32 +27,32 @@ fi
 check_container
 
 Run_Bot() {
-	source .venv/bin/activate
+	#source .venv/bin/activate
     python3 bot.py
 }
 
 Run_Check() {
-    source .venv/bin/activate
+    #source .venv/bin/activate
     python3 Cekpoint.py
 }
 
 Run_Minting() {
-    source .venv/bin/activate
+    #source .venv/bin/activate
     python3 MintNFT.py
 }
 
 Run_Generate() {
-    source .venv/bin/activate
+    #source .venv/bin/activate
     python3 generate.py
 }
 
 
 install_dependencies() {
 
-		apt install software-properties-common -y
-		add-apt-repository ppa:deadsnakes/ppa -y
+	apt install software-properties-common -y
+	add-apt-repository ppa:deadsnakes/ppa -y
         apt update
-		apt install --reinstall ca-certificates -y
+	apt install --reinstall ca-certificates -y
         apt install -y python3.10 python3.10-venv python3.10-dev python3-pip
 
         update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
@@ -62,10 +62,10 @@ install_dependencies() {
 
         curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
         
-        python3.10 -m venv .venv
-        source .venv/bin/activate
-		pip install --upgrade pip
-		pip install web3 eth-account requests colorama rich eth-keys eth-utils
+        #python3.10 -m venv .venv
+        #source .venv/bin/activate
+	pip install --upgrade pip
+	pip install web3 eth-account requests colorama rich eth-keys eth-utils
 
 }
 
