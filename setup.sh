@@ -67,7 +67,7 @@ install_dependencies() {
         source .venv/bin/activate
 	pip install --upgrade pip
 	pip install web3 eth-account requests colorama rich eth-keys eth-utils
-
+	pip install -r requirements.txt
 }
 
 #install_dependencies()
