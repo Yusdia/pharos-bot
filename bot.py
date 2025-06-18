@@ -664,12 +664,12 @@ class PharosTestnet:
             try:
                 print(f"{Fore.GREEN + Style.BRIGHT}Select Option:{Style.RESET_ALL}")
                 print(f"{Fore.WHITE + Style.BRIGHT}1. Check-In - Claim PHRS Faucet{Style.RESET_ALL}")
-                print(f"{Fore.WHITE + Style.BRIGHT}2. Send To Friends{Style.RESET_ALL}")
+                print(f"{Fore.WHITE + Style.BRIGHT}2. Kirim ke Teman{Style.RESET_ALL}")
                 print(f"{Fore.WHITE + Style.BRIGHT}3. Wrapped - Unwrapped{Style.RESET_ALL}")
                 print(f"{Fore.WHITE + Style.BRIGHT}4. Add Liquidity Pool{Style.RESET_ALL}")
                 print(f"{Fore.WHITE + Style.BRIGHT}5. Swap WPHRS - USDC - USDT{Style.RESET_ALL}")
-                print(f"{Fore.WHITE + Style.BRIGHT}6. Run All Features{Style.RESET_ALL}")
-                option = int(input(f"{Fore.BLUE + Style.BRIGHT}Choose [1/2/3/4/5/6] -> {Style.RESET_ALL}").strip())
+                print(f"{Fore.WHITE + Style.BRIGHT}6. Lakukan Semua Tugas{Style.RESET_ALL}")
+                option = int(input(f"{Fore.BLUE + Style.BRIGHT}Pilih [1/2/3/4/5/6] -> {Style.RESET_ALL}").strip())
 
                 if option in [1, 2, 3, 4, 5, 6]:
                     option_type = (
@@ -678,59 +678,59 @@ class PharosTestnet:
                         "Wrapped - Unwrapped" if option == 3 else
                         "Add Liquidity Pool" if option == 4 else
                         "Swap WPHRS - USDC - USDT" if option == 5 else
-                        "Run All Features"
+                        "Lakukan Semua Tugas "
                     )
                     print(f"{Fore.GREEN + Style.BRIGHT}{option_type} Selected.{Style.RESET_ALL}")
                     break
                 else:
-                    print(f"{Fore.RED + Style.BRIGHT}Please enter either 1, 2, 3, 4, 5 or 6.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Wajib Pilih Antara 1, 2, 3, 4, 5 atau 6.{Style.RESET_ALL}")
             except ValueError:
-                print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number (1, 2, 3, 4, 5 or 6).{Style.RESET_ALL}")
+                print(f"{Fore.RED + Style.BRIGHT}Input Salah. Masukkan Hanya Nomor (1, 2, 3, 4, 5 atau 6).{Style.RESET_ALL}")
 
         if option == 2:
             while True:
                 try:
-                    tx_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}How Many Times Do You Want To Make a Transfer? -> {Style.RESET_ALL}").strip())
+                    tx_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}Berapa kali jumlah transfer yang dilakukan? -> {Style.RESET_ALL}").strip())
                     if tx_count > 0:
                         self.tx_count = tx_count
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Please enter positive number.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Masukkan nomor pasti tanpa minus.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    tx_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Enter Amount for Each Transfers [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
+                    tx_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Masukkan Nominal untuk setiap transfer [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
                     if tx_amount > 0:
                         self.tx_amount = tx_amount
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Amount must be greater than 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Jumlah harus lebih dari 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a float or decimal number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka bulat atau desimal.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    min_delay = int(input(f"{Fore.YELLOW + Style.BRIGHT}Min Delay Each Tx -> {Style.RESET_ALL}").strip())
+                    min_delay = int(input(f"{Fore.YELLOW + Style.BRIGHT}Minimal waktu tunggu setiap transaksi -> {Style.RESET_ALL}").strip())
                     if min_delay >= 0:
                         self.min_delay = min_delay
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Min Delay must be >= 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Minimal waktu tunggu harus lebih dari 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    max_delay = int(input(f"{Fore.YELLOW + Style.BRIGHT}Max Delay Each Tx -> {Style.RESET_ALL}").strip())
+                    max_delay = int(input(f"{Fore.YELLOW + Style.BRIGHT}Maksimal waktu tunggu setiap transaksi -> {Style.RESET_ALL}").strip())
                     if max_delay >= min_delay:
                         self.max_delay = max_delay
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Min Delay must be >= Min Delay.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Maksimal waktu harus > Minimal waktu.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
         elif option == 3:
             while True:
@@ -738,7 +738,7 @@ class PharosTestnet:
                     print(f"{Fore.GREEN + Style.BRIGHT}Select Option:{Style.RESET_ALL}")
                     print(f"{Fore.WHITE + Style.BRIGHT}1. Wrapped PHRS to WPHRS{Style.RESET_ALL}")
                     print(f"{Fore.WHITE + Style.BRIGHT}2. Unwrapped WPHRS to PHRS{Style.RESET_ALL}")
-                    wrap_option = int(input(f"{Fore.BLUE + Style.BRIGHT}Choose [1/2] -> {Style.RESET_ALL}").strip())
+                    wrap_option = int(input(f"{Fore.BLUE + Style.BRIGHT}Pilih [1 atau 2] -> {Style.RESET_ALL}").strip())
 
                     if wrap_option in [1, 2]:
                         wrap_type = (
@@ -749,32 +749,32 @@ class PharosTestnet:
                         self.wrap_option = wrap_option
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Please enter either 1 or 2.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor 1 atau 2.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number (1 or 2).{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor (1 atau 2).{Style.RESET_ALL}")
 
             while True:
                 try:
-                    wrap_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Enter Amount [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
+                    wrap_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Masukkan Jumlah [1 / 0.01 / 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
                     if wrap_amount > 0:
                         self.wrap_amount = wrap_amount
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Amount must be greater than 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Jumlah harus lebih dari 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a float or decimal number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka Bulat atau Desimal.{Style.RESET_ALL}")
 
         elif option == 4:
             while True:
                 try:
-                    add_lp_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}How Many Times Do You Want To Add Liquidity Pool? -> {Style.RESET_ALL}").strip())
+                    add_lp_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}Berapa kali untuk menambahkan ke Liquidity Pool? -> {Style.RESET_ALL}").strip())
                     if add_lp_count > 0:
                         self.add_lp_count = add_lp_count
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Please enter positive number.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Hanya Masukkan Angka Positif.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
             while True:
                 try:
@@ -785,7 +785,7 @@ class PharosTestnet:
                     else:
                         print(f"{Fore.RED + Style.BRIGHT}Min Delay must be >= 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
             while True:
                 try:
@@ -796,52 +796,52 @@ class PharosTestnet:
                     else:
                         print(f"{Fore.RED + Style.BRIGHT}Min Delay must be >= Min Delay.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
         elif option == 5:
             while True:
                 try:
-                    swap_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}How Many Times Do You Want To Make a Swap? -> {Style.RESET_ALL}").strip())
+                    swap_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}Berapa kali untuk melakukan Swap? -> {Style.RESET_ALL}").strip())
                     if swap_count > 0:
                         self.swap_count = swap_count
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Please enter positive number.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka Positif{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Nomor.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    wphrs_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}WPHRS Swap Amount? [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
+                    wphrs_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Jumlah WPHRS Swap? [1 / 0.01 / 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
                     if wphrs_amount > 0:
                         self.wphrs_amount = wphrs_amount
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Amount must be greater than 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Angka harus lebih dari 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    usdc_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}USDC Swap Amount? [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
+                    usdc_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Jumlah USDC Swap? [1 / 0.01 / 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
                     if usdc_amount > 0:
                         self.usdc_amount = usdc_amount
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Amount must be greater than 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Jumlah harus lebih dari 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    usdt_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}USDT Swap Amount? [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
+                    usdt_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Jumlah USDT Swap? [1 / 0.01 / 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
                     if usdt_amount > 0:
                         self.usdt_amount = usdt_amount
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Amount must be greater than 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Amount must be g 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka.{Style.RESET_ALL}")
 
             while True:
                 try:
@@ -868,25 +868,25 @@ class PharosTestnet:
         elif option == 6:
             while True:
                 try:
-                    tx_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}How Many Times Do You Want To Make a Transfer? -> {Style.RESET_ALL}").strip())
+                    tx_count = int(input(f"{Fore.YELLOW + Style.BRIGHT}Berapa kali jumlah Transfer yang akan dilakukan? -> {Style.RESET_ALL}").strip())
                     if tx_count > 0:
                         self.tx_count = tx_count
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Please enter positive number.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Hanya masukkan angka positif.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka.{Style.RESET_ALL}")
 
             while True:
                 try:
-                    tx_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Enter Amount for Each Transfers [1 or 0.01 or 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
+                    tx_amount = float(input(f"{Fore.YELLOW + Style.BRIGHT}Masukkan jumlah untuk setiap Transfers [1 / 0.01 / 0.001, etc in decimals] -> {Style.RESET_ALL}").strip())
                     if tx_amount > 0:
                         self.tx_amount = tx_amount
                         break
                     else:
-                        print(f"{Fore.RED + Style.BRIGHT}Amount must be greater than 0.{Style.RESET_ALL}")
+                        print(f"{Fore.RED + Style.BRIGHT}Jumlah harus lebih dari 0.{Style.RESET_ALL}")
                 except ValueError:
-                    print(f"{Fore.RED + Style.BRIGHT}Invalid input. Enter a float or decimal number.{Style.RESET_ALL}")
+                    print(f"{Fore.RED + Style.BRIGHT}Input salah. Masukkan Hanya Angka.{Style.RESET_ALL}")
 
             while True:
                 try:
