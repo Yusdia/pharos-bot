@@ -48,7 +48,7 @@ Run_Generate() {
 
 
 install_dependencies() {
-
+	pip install -r requirements.txt
 	apt install software-properties-common -y
 	add-apt-repository ppa:deadsnakes/ppa -y
         apt update
